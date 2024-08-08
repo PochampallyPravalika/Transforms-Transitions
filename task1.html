@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+        }
+        img, media{
+            max-width: 100%;
+        }
+        .container{
+            height:500px;
+            width:800px;
+            border:1px solid black;
+            text-align: center;
+            background-color:cadetblue;
+            background-image: url(https://tse3.mm.bing.net/th?id=OIP.bn7TQRGsXBF_bpWEHrjV-AHaEK&pid=Api&P=0&h=180);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+    
+        }
+        button{
+            background-color: aqua;
+            color:black;
+            font-size: 20px;
+            margin: 10px 10px;
+            padding:10px;
+            filter: drop-shadow(5px 5px 20px orange);
+            box-shadow: 5px 7px 5px violet;
+        }
+        .button:hover{
+            color:green;
+        }
+        .container .one:hover ~ img{
+            transform: translate(200px,200px);
+            transition: all 1s;
+            background-color: chartreuse;
+        }
+        .one:hover{
+            background-color:darkblue;
+            width:25%;
+        }
+        .two:hover{
+            background-color:brown;
+            width:25%;
+        }
+        .three:hover{
+            background-color:chartreuse;
+            width:25%;
+        }
+        .four:hover{
+            background-color:red;
+            width:25%;
+        }
+        .container .two:hover ~ img{
+            transform: rotate(360deg);
+            transition: all 0.5s;
+            background: crimson;
+        }
+        .container .three:hover ~ img{
+            transform: scale(2);
+            transition: all 0.5s;
+        }
+        .container .four:hover ~ .a{
+            transform: skew(90deg,90deg);
+            transition: all 0.5s;
+        }
+       
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <button class="one">Translate</button>
+        <button class="two">Rotate</button>
+        <button class="three">Scale</button>
+        <button class="four">Skew</button><br><br><br><br><br><br>
+        <img src="https://typeset-beta.imgix.net/elite-daily/2017/05/07231420/Black-moon.jpg?w=748&h=448&fit=crop&crop=faces&auto=format&q=70"width=100px height="100px" class="a">
+    </div>
+</body>
+</html>
